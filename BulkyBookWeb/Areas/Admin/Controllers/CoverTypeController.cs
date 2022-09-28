@@ -3,7 +3,7 @@ using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyBookWeb.Controllers
+namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     public class CoverTypeController : Controller
     {
@@ -28,7 +28,7 @@ namespace BulkyBookWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(CoverType obj)
         {
-            
+
             if (ModelState.IsValid)
             {
                 _unitOfWork.CoverType.Add(obj);
